@@ -1,18 +1,29 @@
-import { Footer } from './Footer/Footer';
-import { Header } from './Header/Header';
-import { Hero } from './Hero/Hero';
-import { Posts } from './Posts/Posts';
-import './App.css';
+// import { Footer } from './Footer/Footer';
+// import { Header } from './Header/Header';
+// import { Hero } from './Hero/Hero';
+// import { Posts } from './Posts/Posts';
+// import './App.css';
+import { users } from 'Blended/Data/users';
+import { Section } from 'Blended/Section/Section';
+import { User } from 'Blended/User/User';
+import { UsersList } from 'Blended/UsersList/UsersList';
 
 export const App = () => {
   return (
-    <div className="App">
+    <>
+      <Section title="List of users">
+        <User user={users[0]}></User>
+      </Section>
+      <Section>
+        <UsersList users={users}></UsersList>
+      </Section>
+
       {/* <Loader /> */}
-      <Header />
+      {/* <Header />
       <Hero />
       <Posts />
-      <Footer />
-    </div>
+      <Footer /> */}
+    </>
   );
 };
 
